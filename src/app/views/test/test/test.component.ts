@@ -9,6 +9,29 @@ export class TestComponent implements OnInit {
 
   constructor() { }
 
+  cells = [
+    {
+      propName: 'name',
+      direction: 'row',
+      children: [
+        {
+          direction: 'col',
+          children: [
+            {
+              dirextion: 'col',
+              propName: 'age',
+            },
+            {
+              propName: 'sex',
+              direction: 'col',
+            },
+          ]
+        }
+
+      ]
+    }
+  ]
+
   menus: MenuItem[] = [
     {
       id: "1",

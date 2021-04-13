@@ -10,13 +10,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TestComponent } from './views/test/test/test.component';
 import { TableComponent } from './components/table/table.component';
+import { CellComponent } from './components/cell/cell.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenusComponent,
     TestComponent,
-    TableComponent
+    TableComponent,
+    CellComponent
   ],
   imports: [
     BrowserModule,

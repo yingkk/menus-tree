@@ -2,7 +2,7 @@
     <tbody>
         <tr *ngFor="let tr of data;let trKey = index">
             <ng-container *ngFor="let td of tr;let tdKey = index">
-                <td *ngIf="td" [attr.colspan]="td ? tdKey: null"> {{ td }}</td>
+                <td *ngIf="td" > {{ td }}</td>
             </ng-container>
         </tr>
     </tbody>

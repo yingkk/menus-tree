@@ -8,20 +8,36 @@ import { Component, OnInit } from '@angular/core';
 export class TableComponent implements OnInit {
 
   constructor() { }
-  data = [];
+  data;
   ngOnInit(): void {
     this.data = [
-      [1, 2, 3, 4],
-      [5, 6, null, null],
-      [null, 10, 11, null],
-      [null, 14, 15, 16]
+      [[[11, 22, 33, 44],
+      [55, 66, 77, 88],
+      [99, 1010, 1111, 1212]
+      ], 2, 3, 4],
+      [5, 6, 7, 8],
+      [9, 10, 11, 12],
+      [13, 14, 15, 16]
     ]
+  }
+
+  dealData(datas: any[]) {
+    let row = datas.length;
+    let col = datas[0].length;
+    datas.forEach((tr, trIndex) => {
+      tr.forEach((td, tdIndex) => {
+        const isArray = td instanceof Array;
+        if (!isArray) {
+          return;
+        }
+      
+
+        // todo
+        this.dealData(td)
+      })
+    });
   }
 }
 
-interface Cell {
-  lable?: string;
-  prop?: string;
-}
 
 
