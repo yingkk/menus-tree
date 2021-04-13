@@ -12,22 +12,62 @@ export class TestComponent implements OnInit {
   cells = [
     {
       propName: 'name',
-      direction: 'row',
+      direction: 'col',
       children: [
         {
-          direction: 'col',
+          direction: 'row',
+          propName: 'chihi',
           children: [
             {
-              dirextion: 'col',
               propName: 'age',
             },
             {
               propName: 'sex',
-              direction: 'col',
+            },
+          ]
+        },
+        {
+          direction: 'row',
+          propName: 'hhhhh',
+          children: [
+            {
+              propName: 'age',
+            },
+            {
+              propName: 'sex',
             },
           ]
         }
-
+      ]
+    },
+    {
+      propName: 'name',
+      direction: 'row',
+      children: [
+        {
+          direction: 'col',
+          propName: 'chihi',
+          children: [
+            {
+              propName: 'age',
+            },
+            {
+              propName: 'sex',
+            },
+          ]
+        },
+        {
+          direction: 'col',
+          propName: 'hhhhh',
+          children: [
+            {
+              propName: 'age',
+            },
+            {
+              propName: 'sex',
+            },
+          ]
+        }
       ]
     }
   ]

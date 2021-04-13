@@ -1,13 +1,12 @@
-<div class="cell">
-    <div [ngClass]="[item.direction === 'row'? 'fx-row': 'fx-col']"
-        *ngFor="let item of cells; let key = index">
-        <div class="cell-prop" *ngIf="item.propName">
-            {{ item.propName }}
-        </div>
-        <ng-container *ngIf="item.children">
-            <app-cell [cells]="item.children"></app-cell>
-        </ng-container>
+<div [ngClass]="[item.direction === 'row'? 'fx-row': 'fx-col']" *ngFor="let item of cells; let key = index"
+    class="cell">
+    <div class="cell-prop" *ngIf="item.propName">
+        {{ item.propName }}
     </div>
+    <div></div>
+    <ng-container *ngIf="item.children">
+        <app-cell [cells]="item.children" [ngClass]="[item.direction === 'row'? 'fx-row': 'fx-col']"></app-cell>
+    </ng-container>
 </div>
 
 
@@ -24,7 +23,6 @@
 
 
 <!-- <div class="fx-full">
-
        <ng-container *ngIf="cell.cells && cell.cells.length">
                 <div *ngIf="cell.direction=='row'" style="border:1px solid red"
                             class="fx-full fx-row fx-sf">
