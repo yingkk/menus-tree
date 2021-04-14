@@ -42,7 +42,25 @@ export class TestComponent implements OnInit {
       prop: '3',
       children: [
         {
-          prop: '3-1'
+          prop: '3-1',
+          children: [
+            {
+              prop: '3-1-1',
+              children: [
+                {
+                  prop: '3-1-1-1',
+                  children: [
+                    {
+                      prop: '3-1-1-1-1'
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          prop: '3-2'
         }
       ]
     }
