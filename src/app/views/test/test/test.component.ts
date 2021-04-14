@@ -8,68 +8,213 @@ import { Component, OnInit } from '@angular/core';
 export class TestComponent implements OnInit {
 
   constructor() { }
-
-  cells = [
+  data = [
     {
-      propName: 'name',
-      direction: 'col',
+      prop: '1',
       children: [
         {
-          direction: 'row',
-          propName: 'chihi',
+          prop: '1-1',
           children: [
             {
-              propName: 'age',
-            },
-            {
-              propName: 'sex',
-            },
-          ]
-        },
-        {
-          direction: 'row',
-          propName: 'hhhhh',
-          children: [
-            {
-              propName: 'age',
-            },
-            {
-              propName: 'sex',
-            },
+              prop: '1-1-1',
+              children: [
+                {
+                  prop: '1-1-1-1'
+                }
+              ]
+            }
           ]
         }
       ]
     },
     {
-      propName: 'name',
+      prop: '2',
+      children: [
+        {
+          prop: '2-1',
+        },
+        {
+          prop: '2-2'
+        }
+      ]
+    },
+    {
+      prop: '3',
+      children: [
+        {
+          prop: '3-1'
+        }
+      ]
+    }
+  ]
+
+  cells = [
+    // row
+    {
+      direction: 'row',
+      children: [
+        {
+          propName: 'bbbbb',
+        },
+        {
+          propName: 'ccccc'
+        },
+        {
+          propName: 'ddddd'
+        },
+        {
+          propName: 'eeeeee'
+        }
+      ]
+    },
+    {
       direction: 'row',
       children: [
         {
           direction: 'col',
-          propName: 'chihi',
           children: [
             {
-              propName: 'age',
-            },
-            {
-              propName: 'sex',
-            },
+              propName: 'gggggg'
+            }
           ]
         },
         {
           direction: 'col',
-          propName: 'hhhhh',
           children: [
             {
-              propName: 'age',
+              propName: 'iiiiiiiiiii'
             },
             {
-              propName: 'sex',
-            },
+              propName: 'jjjjjjjjjjj'
+            }
           ]
-        }
+        },
+        {
+          direction: 'col',
+          children: [
+            {
+              propName: 'kkkkkkkkkkk'
+            },
+            {
+              propName: 'mmmmmmmm'
+            }
+          ]
+        },
       ]
+    },
+    {
+      bgColor: '#e6f7ff',
+      propName: 'nnnnnnn'
     }
+
+
+
+
+    // col
+    // {
+    //   propName: 'aaaaa',
+    //   direction: 'row',
+    //   children: [
+    //     {
+    //       propName: 'bbbb',
+    //       direction: 'col',
+    //       children: [
+    //         {
+    //           propName: 'eeeeee'
+    //         },
+    //         {
+    //            propName: 'ccccc'
+    //         },
+    //         {
+    //           propName: 'ddddd'
+    //         }
+    //       ]
+    //     },
+    //     {
+    //       propName: 'hhhhhh',
+    //       direction: 'col',
+    //       children: [
+    //         {
+    //           propName: 'iiiiiiii'
+    //         },
+    //         {
+    //           propName: 'jjjjjjjjj'
+    //         }
+    //       ]
+    //     },
+    //     {
+    //       propName: 'ffffff'
+    //     },
+    //     {
+    //       propName: 'gggggg'
+    //     },
+    //   ]
+    // }
+
+
+
+
+
+    // {
+    //   propName: 'name',
+    //   direction: 'col',
+    //   children: [
+    //     {
+    //       direction: 'row',
+    //       propName: 'ooooooo',
+    //       children: [
+    //         {
+    //           propName: 'age',
+    //         },
+    //         {
+    //           propName: 'sex',
+    //         },
+    //       ]
+    //     },
+    //     {
+    //       direction: 'row',
+    //       propName: 'jjjjjj',
+    //       children: [
+    //         {
+    //           propName: 'qqqqqq',
+    //         },
+    //         {
+    //           propName: 'mmmmmmm',
+    //         },
+    //       ]
+    //     }
+    //   ]
+    // },
+    // {
+    //   propName: 'aaaaaaaaa',
+    //   direction: 'row',
+    //   children: [
+    //     {
+    //       direction: 'col',
+    //       propName: 'tttttttt',
+    //       children: [
+    //         {
+    //           propName: 'age',
+    //         },
+    //         {
+    //           propName: 'sex',
+    //         },
+    //       ]
+    //     },
+    //     {
+    //       direction: 'col',
+    //       propName: 'hhhhh',
+    //       children: [
+    //         {
+    //           propName: 'bbbbbb',
+    //         },
+    //         {
+    //           propName: 'vvvvvvv',
+    //         },
+    //       ]
+    //     }
+    //   ]
+    // }
   ]
 
   menus: MenuItem[] = [

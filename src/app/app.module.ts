@@ -11,6 +11,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TestComponent } from './views/test/test/test.component';
 import { TableComponent } from './components/table/table.component';
 import { CellComponent } from './components/cell/cell.component';
+import { DynamicTableComponent } from './components/dynamic-table/dynamic-table.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { CellComponent } from './components/cell/cell.component';
     MenusComponent,
     TestComponent,
     TableComponent,
-    CellComponent
+    CellComponent,
+    DynamicTableComponent
   ],
   imports: [
     BrowserModule,
