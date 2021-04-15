@@ -9,6 +9,8 @@ export class DynamicTableComponent implements OnInit {
 
   @Input() data: Node[];
   @Input() border: boolean = true;
+
+  tempHtml: string = "<span>这是一段Html文本</span>"
   constructor() { }
 
   ngOnInit(): void {
@@ -22,7 +24,6 @@ interface Node {
 }
 
 enum PropType {
-  img = 'img',
-  html = 'html'
+  img = 'img'
 }
 
