@@ -3,13 +3,14 @@
 
   .item-prop {
     display: flex;
-    display: inline-block;
     min-width: 100px;
+    padding: 10px;
   }
 
   .item-child {
     border-left: 1px solid #ebedf0;
-    width: fill-available;
+    // width: fill-available;
+    width: stretch;
 
     .item:not(:last-child) {
       border-bottom: 1px solid #ebedf0;
@@ -23,6 +24,7 @@
 
 .border {
   border: 1px solid #ebedf0;
+  align-items: center;
 }
 
 .border:nth-child(2n),
