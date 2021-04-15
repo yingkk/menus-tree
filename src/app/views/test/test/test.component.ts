@@ -1,4 +1,6 @@
+import { PropertyBindingType } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
+// import { PropType } from 'src/app/components/dynamic-table/proptype';
 
 @Component({
   selector: 'app-test',
@@ -40,6 +42,7 @@ export class TestComponent implements OnInit {
     },
     {
       prop: '3',
+      propType: 'img',
       children: [
         {
           prop: '3-1',
@@ -51,7 +54,7 @@ export class TestComponent implements OnInit {
                   prop: '3-1-1-1',
                   children: [
                     {
-                      prop: '3-1-1-1-1'
+                      prop: '3-1-1-1-1',
                     }
                   ]
                 }
@@ -60,7 +63,8 @@ export class TestComponent implements OnInit {
           ]
         },
         {
-          prop: '3-2'
+          prop: '3-2',
+
         }
       ]
     }

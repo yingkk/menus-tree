@@ -17,5 +17,12 @@ export class DynamicTableComponent implements OnInit {
 
 interface Node {
   prop?: string;
+  propType?: PropType;
   children?: Node[];
 }
+
+enum PropType {
+  img = 'img',
+  html = 'html'
+}
+
