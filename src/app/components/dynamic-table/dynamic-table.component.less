@@ -3,13 +3,15 @@
 
   .item-prop {
     display: flex;
-    min-width: 100px;
+    min-width: 120px;
     padding: 10px;
+    align-items: center;
+    word-break: break-all;
+    // background-color: #e6f7ff;
   }
 
   .item-child {
     border-left: 1px solid #ebedf0;
-    // width: fill-available;
     width: stretch;
 
     .item:not(:last-child) {
@@ -18,13 +20,9 @@
   }
 }
 
-.border-bottom {
-  border-bottom: 1px solid #ebedf0;
-}
-
 .border {
+  align-items: stretch;
   border: 1px solid #ebedf0;
-  align-items: center;
 }
 
 .border:nth-child(2n),
