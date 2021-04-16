@@ -9,8 +9,6 @@ import { NgZorroAntdModule, NzTreeBaseService } from 'ng-zorro-antd';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TestComponent } from './views/test/test/test.component';
-import { TableComponent } from './components/table/table.component';
-import { CellComponent } from './components/cell/cell.component';
 import { DynamicTableComponent } from './components/dynamic-table/dynamic-table.component';
 
 @NgModule({
@@ -18,8 +16,6 @@ import { DynamicTableComponent } from './components/dynamic-table/dynamic-table.
     AppComponent,
     MenusComponent,
     TestComponent,
-    TableComponent,
-    CellComponent,
     DynamicTableComponent
   ],
   imports: [

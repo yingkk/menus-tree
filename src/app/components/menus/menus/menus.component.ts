@@ -58,6 +58,7 @@ export class MenusComponent implements OnInit {
 
     let rootMenus = this.addRoot(this.menus);
     this.rootNodes = this.convertMenus2Node(rootMenus);
+    console.log(this.rootNodes)
     this.nodes = this.rootNodes[0].children;
     this.convertNode2TableData();
     this.initForm();
