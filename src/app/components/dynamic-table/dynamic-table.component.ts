@@ -1,4 +1,4 @@
-import { Component, HostBinding, Input, OnInit, ViewChild } from '@angular/core';
+import { Component, HostBinding, Input, OnChanges, OnInit, QueryList, SimpleChanges, ViewChild, ViewChildren } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
@@ -6,21 +6,37 @@ import { DomSanitizer } from '@angular/platform-browser';
   templateUrl: './dynamic-table.component.html',
   styleUrls: ['./dynamic-table.component.less'],
 })
-export class DynamicTableComponent implements OnInit {
+export class DynamicTableComponent implements OnInit{
 
   @Input() data: Node[];
-  @Input() border: boolean = true;
+  @Input() isRoot: boolean = true;
 
   constructor() { }
 
   ngOnInit(): void {
+
+    // const items = this.convert2Tree(this.data, 1)
   }
+
+  // convert2Tree(data: Node[], level: number): Tree[] {
+  //   let result: Tree[] = []
+  //   data.forEach(t => {
+  //     let tempItem: Tree = {
+  //       ...t,
+  //       level: level,
+  //       children: undefined
+  //     }
+  //     result.push(tempItem)
+  //     if (t.children && t.children.length > 0) {
+  //       tempItem.children = this.convert2Tree(t.children, level + 1)
+  //     }
+  //   })
+  //   return result;
+  // }
 }
 
 interface Node {
   prop?: string;
-  width?: string;
-  height?: string;
   propType?: PropType;
   children?: Node[];
 }

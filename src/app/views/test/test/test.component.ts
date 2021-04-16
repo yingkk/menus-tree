@@ -37,6 +37,9 @@ export class TestComponent implements OnInit {
         },
         {
           prop: '2-2'
+        },
+        {
+          prop: '2-3'
         }
       ]
     },
