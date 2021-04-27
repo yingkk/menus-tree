@@ -1,6 +1,4 @@
-import { PropertyBindingType } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
-// import { PropType } from 'src/app/components/dynamic-table/proptype';
 
 @Component({
   selector: 'app-test',
@@ -21,7 +19,7 @@ export class TestComponent implements OnInit {
               prop: '1-1-1',
               children: [
                 {
-                  prop: '1-1-1-1'
+                  prop: '1-1-1-1',
                 }
               ]
             }
@@ -36,10 +34,10 @@ export class TestComponent implements OnInit {
           prop: '2-1',
         },
         {
-          prop: '2-2'
+          prop: '2-2',
         },
         {
-          prop: '2-3'
+          prop: '2-3',
         }
       ]
     },
@@ -72,174 +70,65 @@ export class TestComponent implements OnInit {
     }
   ]
 
-  cells = [
-    // row
-    {
-      direction: 'row',
-      children: [
-        {
-          propName: 'bbbbb',
-        },
-        {
-          propName: 'ccccc'
-        },
-        {
-          propName: 'ddddd'
-        },
-        {
-          propName: 'eeeeee'
-        }
-      ]
-    },
-    {
-      direction: 'row',
-      children: [
-        {
-          direction: 'col',
-          children: [
-            {
-              propName: 'gggggg'
-            }
-          ]
-        },
-        {
-          direction: 'col',
-          children: [
-            {
-              propName: 'iiiiiiiiiii'
-            },
-            {
-              propName: 'jjjjjjjjjjj'
-            }
-          ]
-        },
-        {
-          direction: 'col',
-          children: [
-            {
-              propName: 'kkkkkkkkkkk'
-            },
-            {
-              propName: 'mmmmmmmm'
-            }
-          ]
-        },
-      ]
-    },
-    {
-      bgColor: '#e6f7ff',
-      propName: 'nnnnnnn'
-    }
+  boxData = [{
+    direction: 'col',
+    children: [
+      {
+        direction: 'row',
+        children: [
+          {
+            direction: 'col',
+            children: [
+              {
+                prop: '1-1-1'
+              },
+              {
+                prop: '1-1-2'
+              },
+              {
+                prop: '1-1-3'
+              }
 
-
-
-
-    // col
-    // {
-    //   propName: 'aaaaa',
-    //   direction: 'row',
-    //   children: [
-    //     {
-    //       propName: 'bbbb',
-    //       direction: 'col',
-    //       children: [
-    //         {
-    //           propName: 'eeeeee'
-    //         },
-    //         {
-    //            propName: 'ccccc'
-    //         },
-    //         {
-    //           propName: 'ddddd'
-    //         }
-    //       ]
-    //     },
-    //     {
-    //       propName: 'hhhhhh',
-    //       direction: 'col',
-    //       children: [
-    //         {
-    //           propName: 'iiiiiiii'
-    //         },
-    //         {
-    //           propName: 'jjjjjjjjj'
-    //         }
-    //       ]
-    //     },
-    //     {
-    //       propName: 'ffffff'
-    //     },
-    //     {
-    //       propName: 'gggggg'
-    //     },
-    //   ]
-    // }
-
-
-
-
-
-    // {
-    //   propName: 'name',
-    //   direction: 'col',
-    //   children: [
-    //     {
-    //       direction: 'row',
-    //       propName: 'ooooooo',
-    //       children: [
-    //         {
-    //           propName: 'age',
-    //         },
-    //         {
-    //           propName: 'sex',
-    //         },
-    //       ]
-    //     },
-    //     {
-    //       direction: 'row',
-    //       propName: 'jjjjjj',
-    //       children: [
-    //         {
-    //           propName: 'qqqqqq',
-    //         },
-    //         {
-    //           propName: 'mmmmmmm',
-    //         },
-    //       ]
-    //     }
-    //   ]
-    // },
-    // {
-    //   propName: 'aaaaaaaaa',
-    //   direction: 'row',
-    //   children: [
-    //     {
-    //       direction: 'col',
-    //       propName: 'tttttttt',
-    //       children: [
-    //         {
-    //           propName: 'age',
-    //         },
-    //         {
-    //           propName: 'sex',
-    //         },
-    //       ]
-    //     },
-    //     {
-    //       direction: 'col',
-    //       propName: 'hhhhh',
-    //       children: [
-    //         {
-    //           propName: 'bbbbbb',
-    //         },
-    //         {
-    //           propName: 'vvvvvvv',
-    //         },
-    //       ]
-    //     }
-    //   ]
-    // }
-  ]
+            ]
+          },
+          {
+            prop: '1-2'
+          },
+          {
+            prop: '1-3'
+          }
+        ]
+      },
+      {
+        direction: 'row',
+        children: [
+          {
+            prop: '2-1'
+          },
+          {
+            prop: '2-2'
+          },
+          {
+            prop: '2-3'
+          }
+        ]
+      },
+      {
+        direction: 'row',
+        children: [
+          {
+            prop: '3-1'
+          },
+          {
+            prop: '3-2'
+          },
+          {
+            prop: '3-3'
+          }
+        ]
+      }
+    ]
+  }]
 
   menus: MenuItem[] = [
     {
@@ -307,7 +196,6 @@ export class TestComponent implements OnInit {
   ngOnInit(): void {
 
   }
-
 }
 
 export interface MenuItem {

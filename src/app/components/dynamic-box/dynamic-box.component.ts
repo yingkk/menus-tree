@@ -1,28 +1,30 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-dynamic-table',
-  templateUrl: './dynamic-table.component.html',
-  styleUrls: ['./dynamic-table.component.less'],
+  selector: 'app-dynamic-box',
+  templateUrl: './dynamic-box.component.html',
+  styleUrls: ['./dynamic-box.component.less']
 })
-export class DynamicTableComponent implements OnInit{
+export class DynamicBoxComponent implements OnInit {
 
   @Input() data: Node[];
   @Input() isRoot: boolean = true;
-
   constructor() { }
 
   ngOnInit(): void {
   }
+
 }
 
 interface Node {
+  type?: string;
+  direction?: string;
+  width?: string;
   prop?: string;
-  propType?: PropType;
+  propType?: string;
   children?: Node[];
 }
 
 enum PropType {
   img = 'img'
 }
-

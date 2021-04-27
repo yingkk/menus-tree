@@ -10,13 +10,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TestComponent } from './views/test/test/test.component';
 import { DynamicTableComponent } from './components/dynamic-table/dynamic-table.component';
+import { DynamicBoxComponent } from './components/dynamic-box/dynamic-box.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenusComponent,
     TestComponent,
-    DynamicTableComponent
+    DynamicTableComponent,
+    DynamicBoxComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,8 @@
+<div *ngFor="let item of data"
+    [ngClass]="['dynamic-box', item.direction ==='row' ? 'flex-row' : 'flex-col', isRoot ? 'border': '' ]">
+    <div class="item-prop" *ngIf="!item.direction;">{{ item.prop }}</div>
+    <ng-container *ngIf="item.direction && item.children && item.children.length">
+        <app-dynamic-box [data]="item.children" [isRoot]="false"
+            [ngClass]="['dynamic-box',item.direction ==='row' ? 'flex-row' : 'flex-col']"></app-dynamic-box>
+    </ng-container>
+</div>
