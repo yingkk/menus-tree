@@ -88,7 +88,6 @@ export class TestComponent implements OnInit {
               {
                 prop: '1-1-3'
               }
-
             ]
           },
           {
@@ -103,13 +102,33 @@ export class TestComponent implements OnInit {
         direction: 'row',
         children: [
           {
-            prop: '2-1'
+            direction: 'row',
+            children: [
+              {
+                prop: '2-1-1'
+              },
+              {
+                prop: '2-1-2'
+              }
+            ]
           },
           {
             prop: '2-2'
           },
           {
             prop: '2-3'
+            // direction: 'col',
+            // children: [
+            //   {
+            //     prop: '2-3-1'
+            //   },
+            //   {
+            //     prop: '2-3-2'
+            //   },
+            //   {
+            //     prop: '2-3-3'
+            //   }
+            // ]
           }
         ]
       },
@@ -123,7 +142,19 @@ export class TestComponent implements OnInit {
             prop: '3-2'
           },
           {
-            prop: '3-3'
+            // prop: '3-3'
+            direction: 'row',
+            children: [
+              {
+                prop: '3-1'
+              },
+              {
+                prop: '3-2'
+              },
+              {
+                prop: '3-3'
+              }
+            ]
           }
         ]
       }

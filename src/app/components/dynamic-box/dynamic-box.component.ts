@@ -12,12 +12,13 @@ export class DynamicBoxComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
+    
   }
 
 }
 
 interface Node {
-  type?: string;
   direction?: string;
   width?: string;
   prop?: string;

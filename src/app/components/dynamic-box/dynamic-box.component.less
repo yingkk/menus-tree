@@ -1,5 +1,4 @@
 .dynamic-box {
-  border: 1px solid #e8e8e8;
 }
 
 .flex-row {
@@ -23,3 +22,34 @@
   align-items: stretch;
   border: 1px solid #ebedf0;
 }
+.border > .flex-col > .flex-row {
+  border-bottom: 1px solid #ebedf0;
+}
+.border > .flex-col > .flex-row:last-child {
+  border-bottom: none;
+}
+.flex-row > .flex-col {
+  border-right: 1px solid #ebedf0;
+}
+.flex-row > .flex-col:last-child {
+  border-right: none;
+  width: stretch;
+}
+.flex-col > .flex-col {
+  border-bottom: 1px solid #ebedf0;
+}
+.flex-col > .flex-col:last-child {
+  border-bottom: none;
+}
+
+.flex-row > .flex-row > .flex-row > .dynamic-box {
+  min-width: 60px;
+  > .item-prop {
+    min-width: inherit;
+  }
+}
+
+.flex-row > .flex-row > .flex-row > .dynamic-box > .item-prop:last-child {
+  border-right: 1px solid #ebedf0;
+}
+
